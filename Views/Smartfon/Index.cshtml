@@ -1,0 +1,14 @@
+﻿@model List<Smartfon>
+
+<div class="text-center">
+    <h1 class="display-4">Список смартфонов</h1>
+    <a class="nav-link text-dark" asp-area="" asp-controller="Smartfon" asp-action="Adding">Добавить запись</a>
+    <table style="width:100%">
+        <tr><th>Название</th><th>Цена</th><th>Бренд</th><th>Диаметр экрана (в дюймах)</th><th>Память</th><th>Частота процессора</th><th></th><th></th></tr>
+        @foreach (var smartfon in Model)
+        {
+            <tr><td>@smartfon.SName</td><td>@smartfon.Price руб.</td><td>@smartfon.Brend</td><td>@smartfon.Diam ''</td><td>@smartfon.Ozy Гб</td><td>@smartfon.Chast ГГц</td><td><a href="/Smartfon/EditView?name=@smartfon.SName">Редактировать</a></td><td><a href="/Smartfon/DeleteView?name=@smartfon.SName">Удалить</a></td></tr>
+        }
+    </table>
+</div>
+

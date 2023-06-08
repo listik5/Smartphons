@@ -1,0 +1,23 @@
+﻿<form method="post">
+    <h5>@if (ViewData["hasError"].Equals("1"))
+    {
+        @ViewData["error"]
+    }
+    @if (ViewData["hasError1"].Equals("1"))
+    {
+        @ViewData["error"]
+    }</h5>
+    <label>Название (не более 15 символов):</label><br />
+    <input type="text" name="name" required maxlength="15"><br /><br />
+    <label>Цена:</label><br />
+    <input type="text" name="price" required><br /><br />
+    <label>Бренд (не более 15 символов):</label><br />
+    <input type="text" name="brend" required maxlength="15"><br /><br />
+    <label>Диаметр экрана(в дюймах):</label><br />
+    <input type="text" name="diam" required><br /><br />
+    <label>Память:</label><br />
+    <input type="text" name="ozy" required><br /><br />
+    <label>Частота процессора:</label><br />
+    <input type="text" name="chast" required><br /><br />
+    <input type="submit" value="Отправить">
+</form>

@@ -1,0 +1,18 @@
+﻿@model Smartfon
+
+<form method="post">
+    <h4>Редактирование элемента <input type="text" name="sname" value="@Model.SName" readonly /><br /><br /><br /></h4>
+    <label>Название (не более 15 символов):</label><br />
+    <input type="text" name="name" value="@Model.SName" maxlength="15" required><br /><br />
+    <label>Цена:</label><br />
+    <input type="text" name="price" value="@Model.Price" required><br /><br />
+    <label>Бренд (не более 15 символов):</label><br />
+    <input type="text" name="brend" value="@Model.Brend" maxlength="15" required><br /><br />
+    <label>Диаметр экрана(в дюймах):</label><br />
+    <input type="text" name="diam" value="@Model.Diam" required><br /><br />
+    <label>Память:</label><br />
+    <input type="text" name="ozy" value="@Model.Ozy" required><br /><br />
+    <label>Частота процессора:</label><br />
+    <input type="text" name="chast" value="@Model.Chast" required><br /><br />
+    <input type="submit" value="Отправить" />
+</form>
